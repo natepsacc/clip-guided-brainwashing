@@ -127,15 +127,27 @@ while True:
 
     # concatenate image Vertically
     Verti = np.concatenate((Hori, Hori2, Hori3, Hori4, Hori5), axis=0)
-    text='connected'
-    text1='real'
-    text2='i exist'
-    text3='prepared'
-    text4='love'
-    text5='warmth'
-    text6='passion'
-    text7='drive'
-    text8='human'
+    class text(Enum):
+        connected = 1
+        real  = 2
+        i_exist = 3
+        prepared = 4
+        love = 5
+        warmth = 6
+        passion = 7
+        drive = 8
+        human = 9
+        i_am_seen = 10
+        i_have_value = 11
+        love_ = 12
+        compassion = 13
+        interconnectedness = 14
+        cells = 15
+        alive = 16
+        free = 17
+        strength = 18
+        beach = 19
+        #
 
     class HersheyFonts(Enum):
         cv2.FONT_HERSHEY_SIMPLEX        = 0,
@@ -147,15 +159,11 @@ while True:
         cv2.FONT_HERSHEY_SCRIPT_SIMPLEX = 6,
         cv2.FONT_HERSHEY_SCRIPT_COMPLEX = 7
     
-    cv2.putText(Verti, text, (randrange(1920), randrange(1080)), cv2.FONT_HERSHEY_SCRIPT_COMPLEX, randrange(10), (randrange(255), randrange(255), randrange(255)), randrange(5))
-    cv2.putText(Verti, text1, (randrange(1920), randrange(1080)), cv2.FONT_HERSHEY_SCRIPT_COMPLEX, randrange(10), (randrange(255), randrange(255), randrange(255)), randrange(5))
-    cv2.putText(Verti, text2, (randrange(1920), randrange(1080)), cv2.FONT_HERSHEY_SCRIPT_COMPLEX, randrange(10), (randrange(255), randrange(255), randrange(255)), randrange(5))
-    cv2.putText(Verti, text3, (randrange(1920), randrange(1080)), cv2.FONT_HERSHEY_SCRIPT_COMPLEX, randrange(10), (randrange(255), randrange(255), randrange(255)), randrange(5))
-    cv2.putText(Verti, text4, (randrange(1920), randrange(1080)), cv2.FONT_HERSHEY_SCRIPT_COMPLEX, randrange(10), (randrange(255), randrange(255), randrange(255)), randrange(5))
-    cv2.putText(Verti, text5, (randrange(1920), randrange(1080)), cv2.FONT_HERSHEY_SCRIPT_COMPLEX, randrange(10), (randrange(255), randrange(255), randrange(255)), randrange(5))
-    cv2.putText(Verti, text6, (randrange(1920), randrange(1080)), cv2.FONT_HERSHEY_SCRIPT_COMPLEX, randrange(10), (randrange(255), randrange(255), randrange(255)), randrange(5))
-    cv2.putText(Verti, text7, (randrange(1920), randrange(1080)), cv2.FONT_HERSHEY_SCRIPT_COMPLEX, randrange(10), (randrange(255), randrange(255), randrange(255)), randrange(5))
-    cv2.putText(Verti, text8, (randrange(1920), randrange(1080)), cv2.FONT_HERSHEY_SCRIPT_COMPLEX, randrange(10), (randrange(255), randrange(255), randrange(255)), randrange(5))
+    cv2.putText(Verti, text(randrange(1,19)).name, (randrange(1920), randrange(1080)), cv2.FONT_HERSHEY_SCRIPT_COMPLEX, randrange(10), (randrange(255), randrange(255), randrange(255)), randrange(5))
+    cv2.putText(Verti, text(randrange(1,19)).name, (randrange(1920), randrange(1080)), cv2.FONT_HERSHEY_SCRIPT_COMPLEX, randrange(10), (randrange(255), randrange(255), randrange(255)), randrange(5))
+    cv2.putText(Verti, text(randrange(1,19)).name, (randrange(1920), randrange(1080)), cv2.FONT_HERSHEY_SCRIPT_COMPLEX, randrange(10), (randrange(255), randrange(255), randrange(255)), randrange(5))
+    cv2.putText(Verti, text(randrange(1,19)).name, (randrange(1920), randrange(1080)), cv2.FONT_HERSHEY_SCRIPT_COMPLEX, randrange(10), (randrange(255), randrange(255), randrange(255)), randrange(5))
+    cv2.putText(Verti, text(randrange(1,19)).name, (randrange(1920), randrange(1080)), cv2.FONT_HERSHEY_SCRIPT_COMPLEX, randrange(10), (randrange(255), randrange(255), randrange(255)), randrange(5))
 
     cv2.imshow('connection', Verti)
-    cv2.waitKey(randrange(20,140))
+    cv2.waitKey(randrange(20,540))
